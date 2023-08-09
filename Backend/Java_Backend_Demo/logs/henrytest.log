@@ -1,0 +1,60 @@
+2023-08-09T16:43:42.670+08:00  INFO 37056 --- [main] c.h.d.JavaBackendDemoApplicationTests    : Starting JavaBackendDemoApplicationTests using Java 17.0.2 with PID 37056 (started by Htein Lin Aung in D:\Github\repo\henry_demo\Backend\Java_Backend_Demo)
+2023-08-09T16:43:42.672+08:00  INFO 37056 --- [main] c.h.d.JavaBackendDemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-08-09T16:43:43.325+08:00  INFO 37056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09T16:43:43.381+08:00  INFO 37056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2023-08-09T16:43:43.845+08:00  INFO 37056 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09T16:43:43.894+08:00  INFO 37056 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-09T16:43:43.897+08:00  INFO 37056 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-09T16:43:44.067+08:00  INFO 37056 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09T16:43:44.185+08:00  INFO 37056 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-09T16:43:44.207+08:00  INFO 37056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-09T16:43:44.408+08:00  INFO 37056 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@faec277
+2023-08-09T16:43:44.411+08:00  INFO 37056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-09T16:43:44.640+08:00  INFO 37056 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09T16:43:45.232+08:00  INFO 37056 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09T16:43:45.255+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:43:45.256+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "users" does not exist, skipping
+2023-08-09T16:43:45.256+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:43:45.257+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "roles" does not exist, skipping
+2023-08-09T16:43:45.257+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:43:45.257+08:00  WARN 37056 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "users" does not exist, skipping
+2023-08-09T16:43:45.284+08:00  INFO 37056 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09T16:43:45.705+08:00  WARN 37056 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09T16:43:45.791+08:00  INFO 37056 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c1c0892, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1771d6a5, org.springframework.security.web.context.SecurityContextHolderFilter@3f22ce2a, org.springframework.security.web.header.HeaderWriterFilter@4af50246, org.springframework.security.web.authentication.logout.LogoutFilter@f245168, com.henry.demo.jwt.JwtRequestFilter@1b120d48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e069ca9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45e9db77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d51b6a8, org.springframework.security.web.session.SessionManagementFilter@4f629aa4, org.springframework.security.web.access.ExceptionTranslationFilter@3fcb737, org.springframework.security.web.access.intercept.AuthorizationFilter@21f94fe3]
+2023-08-09T16:43:46.283+08:00  INFO 37056 --- [main] c.h.d.JavaBackendDemoApplicationTests    : Started JavaBackendDemoApplicationTests in 3.868 seconds (process running for 4.838)
+2023-08-09T16:43:46.865+08:00  INFO 37056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09T16:43:46.876+08:00  INFO 37056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-09T16:43:46.879+08:00  INFO 37056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-09T16:44:01.405+08:00  INFO 38684 --- [main] c.henry.demo.JavaBackendDemoApplication  : Starting JavaBackendDemoApplication using Java 17.0.2 with PID 38684 (D:\Github\repo\henry_demo\Backend\Java_Backend_Demo\target\classes started by Htein Lin Aung in D:\Github\repo\henry_demo\Backend\Java_Backend_Demo)
+2023-08-09T16:44:01.408+08:00  INFO 38684 --- [main] c.henry.demo.JavaBackendDemoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-08-09T16:44:01.888+08:00  INFO 38684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09T16:44:01.944+08:00  INFO 38684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2023-08-09T16:44:02.384+08:00  INFO 38684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-09T16:44:02.391+08:00  INFO 38684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-09T16:44:02.391+08:00  INFO 38684 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-09T16:44:02.480+08:00  INFO 38684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-09T16:44:02.481+08:00  INFO 38684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2023-08-09T16:44:02.579+08:00  INFO 38684 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09T16:44:02.620+08:00  INFO 38684 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-09T16:44:02.622+08:00  INFO 38684 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-09T16:44:02.728+08:00  INFO 38684 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09T16:44:02.841+08:00  INFO 38684 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-09T16:44:02.853+08:00  INFO 38684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-09T16:44:02.989+08:00  INFO 38684 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67941d
+2023-08-09T16:44:02.990+08:00  INFO 38684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-09T16:44:03.171+08:00  INFO 38684 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09T16:44:03.670+08:00  INFO 38684 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09T16:44:03.685+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:44:03.685+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "users" does not exist, skipping
+2023-08-09T16:44:03.686+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:44:03.686+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "roles" does not exist, skipping
+2023-08-09T16:44:03.687+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-08-09T16:44:03.687+08:00  WARN 38684 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "users" does not exist, skipping
+2023-08-09T16:44:03.717+08:00  INFO 38684 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09T16:44:04.084+08:00  WARN 38684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09T16:44:04.314+08:00  INFO 38684 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36ce9eaf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a79d99c, org.springframework.security.web.context.SecurityContextHolderFilter@36696821, org.springframework.security.web.header.HeaderWriterFilter@20505460, org.springframework.security.web.authentication.logout.LogoutFilter@231c521e, com.henry.demo.jwt.JwtRequestFilter@4d1b4fa1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@769a9b7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d568cff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f27f354, org.springframework.security.web.session.SessionManagementFilter@90c01ab, org.springframework.security.web.access.ExceptionTranslationFilter@590f806a, org.springframework.security.web.access.intercept.AuthorizationFilter@252d2ac0]
+2023-08-09T16:44:04.531+08:00  INFO 38684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-09T16:44:04.538+08:00  INFO 38684 --- [main] c.henry.demo.JavaBackendDemoApplication  : Started JavaBackendDemoApplication in 3.445 seconds (process running for 3.987)
+2023-08-09T16:44:10.371+08:00  INFO 38684 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-09T16:44:10.371+08:00  INFO 38684 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-09T16:44:10.372+08:00  INFO 38684 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
