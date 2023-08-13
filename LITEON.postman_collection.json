@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "1fd853de-b38d-4f5a-a764-a49e093e4681",
+		"name": "LITEON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2646254"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\":\"normal\",\r\n     \"email\": \"normaladmin@test.com\",\r\n     \"password\": \"Abcd123$\",\r\n     \"role\": \"normal_admin\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login(SuperAdmin)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Superadmin\",\r\n    \"password\": \"Abcd123$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login(NormalAdmin)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Normaladmin\",\r\n    \"password\": \"Abcd12#$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secure User Content (All role)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxNjgwMTE0LCJleHAiOjE2OTE2ODAxNzR9.Mx_KJJXiFYCjOfTyD2vSAoowKnZVq6Iitcjb36VO3SuKUgQo87nvP43G2O8iYFojSaghtDydh7tLIKmiXNzF4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/secure/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"secure",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secure Normal Admin Content (Normal Admin Role)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxODI5NzU5LCJleHAiOjE2OTE4Mjk4MTl9.6PsOHfbu4e9gjAwLF0prcg43JgvVcWOst7Z4E3fdgD3huA7yWBJIvaUsZznd4RDPvcnO5A-HOeFf7TPUK3K65A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/secure/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"secure",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secure Super Admin Content (Super Admin Role)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxNTk0MjM1LCJleHAiOjE2OTE1OTQ1MzV9.z2NFhV8rz4FnUIPrWetloxOSCJKqvcFslRiNy0KBy6E"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxNjgwMTE0LCJleHAiOjE2OTE2ODAxNzR9.Mx_KJJXiFYCjOfTyD2vSAoowKnZVq6Iitcjb36VO3SuKUgQo87nvP43G2O8iYFojSaghtDydh7tLIKmiXNzF4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/secure/superadmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"secure",
+						"superadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/refreshToken/f07cd127-c16a-4bf0-a380-9830b511f29a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"refreshToken",
+						"f07cd127-c16a-4bf0-a380-9830b511f29a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new todo (all role)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxODUwMjI4LCJleHAiOjE2OTE4NTA1Mjh9.PlPVmiLMzAT2aTyDNdvbdrA5w8opHZXd-8sFV47t0PmkRWruhmAB3WL8ni7cSVHepQLc8XWILKrRv0NnBszXZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":0,\r\n    \"name\":\"test todo\",\r\n    \"description\":\"test todo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/todo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update todo item (all role)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjkxODUwODA4LCJleHAiOjE2OTE4NTExMDh9.9Q2mxGNciHJ17n3J6-le75jjheVmyXKRSsRgtvaoJ0CafpNDpSCrXwvNLZZpKbS8e6fvyihWSRa00T9YxAuKvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"ggwp\",\r\n    \"description\":\"ggwp world\",\r\n    \"isCompleted\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/todo/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todo",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all todo item (only for super admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOb3JtYWxhZG1pbiIsImlhdCI6MTY5MTg1MTcyMCwiZXhwIjoxNjkxODUyMDIwfQ.IzK34bx8K1cjQLQjN0-O_9L8SqBrZwySpWEaokLmwqpPvK274DeTbUamQ9i0DhZT0Hf9EK_fooGPqxcSHB6ShQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/todo/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todo",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my todo item (all user)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOb3JtYWxhZG1pbiIsImlhdCI6MTY5MTg1MTcyMCwiZXhwIjoxNjkxODUyMDIwfQ.IzK34bx8K1cjQLQjN0-O_9L8SqBrZwySpWEaokLmwqpPvK274DeTbUamQ9i0DhZT0Hf9EK_fooGPqxcSHB6ShQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/todo/myitem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todo",
+						"myitem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete item (only for super admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcjEiLCJpYXQiOjE2OTE4NDkzMzcsImV4cCI6MTY5MTg0OTYzN30.9TrXqtCTz_cBxw0ssCs2_Bjp8p-8UFSdQf8ewBAHYXYzQ_BVCiutX-ymovCNwsmis1IqGxwIL8oq6dZC_Gp2HA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/todo/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todo",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
