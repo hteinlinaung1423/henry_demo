@@ -1,12 +1,16 @@
 package com.henry.demo.jwt;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,6 +26,16 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
 		logger.error("Unauthorized access: {}", authException.getMessage());
 
-		response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Error Message: " + authException.getMessage());
+		response.setContentType("application/json");
+		response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+		final Map<String, Object> body = new HashMap<>();
+		body.put("status", HttpServletResponse.SC_UNAUTHORIZED);
+		body.put("error", "Unauthorized");
+		body.put("message", authException.getMessage());
+		body.put("path", request.getServletPath());
+
+		final ObjectMapper mapper = new ObjectMapper();
+		mapper.writeValue(response.getOutputStream(), body);
+		//response.getOutputStream().println("{ \"Error Message\": \"" + authException.getMessage() + "\" }");
 	}
 }

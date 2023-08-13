@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+
+  db_henry:
+    image: 'postgres:13.1-alpine'
+    container_name: db_henry
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: henry_demo
+      POSTGRES_USER: compose-postgres
+      POSTGRES_PASSWORD: compose-postgres
+  
+  backend_java_henry:
+    container_name: backend_java_henry
+    restart: unless-stopped
+    build:
+      context: ./Backend/Java_Backend_Demo
+      dockerfile: ./Dockerfile
+      args:
+        environment: dev
+        status: stable
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db_henry:5432/henry_demo
+      SPRING_DATASOURCE_USERNAME: compose-postgres
+      SPRING_DATASOURCE_PASSWORD: compose-postgres
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create-drop
+    depends_on:
+      - db_henry
+    links:
+      - db_henry

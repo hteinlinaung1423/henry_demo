@@ -27,9 +27,15 @@ public class JwtUtil {
 
 		JwtUserDetailsImpl userPrincipal = (JwtUserDetailsImpl) authentication.getPrincipal();
 
-		return Jwts.builder().setSubject((userPrincipal.getUsername())).setIssuedAt(new Date())
+		return Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date())
 				.setExpiration(new Date((new Date()).getTime() + expirationMs))
-				.signWith(key(), SignatureAlgorithm.HS256).compact();
+				.signWith(key(), SignatureAlgorithm.HS512).compact();
+	}
+
+	public String generateTokenFromUsername(String username) {
+		return Jwts.builder().setSubject(username).setIssuedAt(new Date())
+				.setExpiration(new Date((new Date()).getTime() + expirationMs))
+				.signWith(key(), SignatureAlgorithm.HS512).compact();
 	}
 
 	private Key key() {

@@ -9,14 +9,16 @@ public class JwtResponseDTO {
 	private String email;
 	private String accessToken;
 	private List<String> roles;
+	private String refreshToken;
 	
-	public JwtResponseDTO(Integer id, String username, String email, String accessToken,List<String> roles) {
+	public JwtResponseDTO(Integer id, String username, String email, String accessToken,List<String> roles,String refreshToken) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.accessToken = accessToken;
 		this.roles=roles;
+		this.refreshToken=refreshToken;
 	}
 	public Integer getId() {
 		return id;
@@ -48,5 +50,12 @@ public class JwtResponseDTO {
 	public void setRoles(List<String> roles) {
 		this.roles = roles;
 	}
+	public String getRefreshToken() {
+		return refreshToken;
+	}
+	public void setRefreshToken(String refreshToken) {
+		this.refreshToken = refreshToken;
+	}
+	
 
 }
