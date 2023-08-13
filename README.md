@@ -19,7 +19,7 @@ Backend Project will be running port `8080` accessed by localhost host IP adress
 
 ### Expected output after building docker image
 
-![Alt text](image.png)
+![Alt text](assets/image.png)
 
 ### Availabel API list
 
