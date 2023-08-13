@@ -18,6 +18,7 @@ import com.henry.demo.jwt.JwtAuthenticationEntryPoint;
 import com.henry.demo.jwt.JwtRequestFilter;
 import com.henry.demo.jwt.JwtUserDetailsServiceImpl;
 
+
 @Configuration
 @EnableMethodSecurity
 public class WebSecurityConfig {
@@ -55,7 +56,7 @@ public class WebSecurityConfig {
 		http.csrf(csrf -> csrf.disable())
 				.exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint))
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-				.authorizeHttpRequests(auth -> auth.requestMatchers("/","/api/auth/**").permitAll()
+				.authorizeHttpRequests(auth -> auth.requestMatchers("/","/v3/**","/swagger-ui/**","/api/auth/**").permitAll()
 						.requestMatchers("/api/secure/**","/api/todo/**").permitAll().anyRequest().authenticated());
 
 		http.authenticationProvider(authenticationProvider());
@@ -64,4 +65,5 @@ public class WebSecurityConfig {
 
 		return http.build();
 	}
+	
 }
